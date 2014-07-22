@@ -1,0 +1,48 @@
+project scrapemachine 
+	: requirements 	
+		<include>. 
+					
+;
+
+
+using gcc ;
+
+#library definitions
+#lib boost_date_time 	: : <file>/usr/lib/libboost_date_time.so ;
+#lib pthread				: : <file>/usr/lib/i386-linux-gnu/libpthread.so ;
+#lib pantheios_fe 		: : <file>/usr/lib/libpantheios.1.fe.simple.gcc46.mt.a ;
+#lib pantheios_be 		: : <file>/usr/lib/libpantheios.1.be.file.gcc46.mt.a ;
+#lib pantheios_core 		: : <file>/usr/lib/libpantheios.1.core.gcc46.mt.a ; 
+#lib pantheios_util 		: : <file>/usr/lib/libpantheios.1.util.gcc46.mt.a ; 
+#lib pantheios_bec_file 	: : <file>/usr/lib/libpantheios.1.bec.file.gcc46.mt.a ;
+lib curl				: : <file>/usr/lib/x86_64-linux-gnu/libcurl.so ;
+#lib gsoap				: : <file>/home/max/gsoap-2.8/gsoap/libgsoap++.a ;
+#lib openmp				: : <file>/usr/lib/i386-linux-gnu/libgomp.so.1.0.0 ;
+#lib tidy				: : <file>/usr/lib/libtidy.so ;
+lib regex				: : <file>/usr/lib/x86_64-linux-gnu/libboost_regex.so ;
+
+#target building
+lib scrapemachine : 
+				 # source file includes
+				 # main.cpp
+				 Scraper.cpp
+				 ScrapeRequest.cpp
+				 
+				 #libraries
+ 				 #boost_date_time
+				 curl
+				 #tidy
+				 regex
+				 #mysqlpp
+				 #mysqlclient
+				 
+				:  
+		   		
+		   		<cxxflags>-std=c++0x 
+
+				
+				
+		   		
+		   		#includes not already referenced in requirements section of project
+		
+			    ;
