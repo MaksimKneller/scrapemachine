@@ -1,5 +1,9 @@
 #include <iostream>
+<<<<<<< HEAD
 #include "Scraper.h"
+=======
+#include <Scraper.h>
+>>>>>>> parent of 6fb9367... Delete main.cpp
 #include "ScrapeRequest.h"
 
 int main()
@@ -11,8 +15,12 @@ int main()
 	ScrapeRequest request;
 	ScrapeResult  result;
 
+<<<<<<< HEAD
 	//request.connParams = { "https://www.fanduel.com/p/login#login" };
 	request.connParams = { "http://maksimkneller.com" };
+=======
+	request.connParams = { "https://www.fanduel.com/p/login#login" };
+>>>>>>> parent of 6fb9367... Delete main.cpp
 
 		//request.regexParams = { "<title><!\\[CDATA\\[(.*?)\\]\\]></title>" };
 		//request.regexParams.tags.push_back("title");
@@ -24,7 +32,10 @@ int main()
 
 	if(!scrpResult) std::cout << "Error scraping: " << request.connParams.url << " " << result.errorMsg << std::endl;
 
+<<<<<<< HEAD
 	exit(1);
+=======
+>>>>>>> parent of 6fb9367... Delete main.cpp
 
 		/*
 		if(result.regexMatches.size() > 0)
