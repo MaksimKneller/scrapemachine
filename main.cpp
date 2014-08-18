@@ -1,5 +1,5 @@
 #include <iostream>
-#include <Scraper.h>
+#include "Scraper.h"
 #include "ScrapeRequest.h"
 
 int main()
@@ -11,7 +11,8 @@ int main()
 	ScrapeRequest request;
 	ScrapeResult  result;
 
-	request.connParams = { "https://www.fanduel.com/p/login#login" };
+	//request.connParams = { "https://www.fanduel.com/p/login#login" };
+	request.connParams = { "http://maksimkneller.com" };
 
 		//request.regexParams = { "<title><!\\[CDATA\\[(.*?)\\]\\]></title>" };
 		//request.regexParams.tags.push_back("title");
@@ -23,6 +24,7 @@ int main()
 
 	if(!scrpResult) std::cout << "Error scraping: " << request.connParams.url << " " << result.errorMsg << std::endl;
 
+	exit(1);
 
 		/*
 		if(result.regexMatches.size() > 0)

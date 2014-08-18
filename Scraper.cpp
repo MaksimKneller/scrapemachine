@@ -223,7 +223,7 @@ void processRegex(ScrapeRequest & req, ScrapeResult & res)
 
 
 	boost::sregex_iterator matchIter(res.result.begin(), res.result.end(),
-			boost::regex(req.regexParams.re, boost::regex::icase | boost::regex::perl));
+			boost::regex(req.regexParams.re , boost::regex::perl));
 
 	boost::sregex_iterator end;
 

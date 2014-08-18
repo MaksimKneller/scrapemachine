@@ -54,6 +54,8 @@ struct ScrapeResult
 
 };
 
+typedef std::vector<std::map<std::string, std::string> > SCRAPERESULT;
+
 
 
 bool fetchFile(ScrapeRequest & req, ScrapeResult & res);
