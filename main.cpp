@@ -68,8 +68,8 @@ int main()
 	request.connParams.multipartFields.push_back(std::make_pair("checkbox_remember", "1"));
 
 	// update request with email and password login
-	request.connParams.multipartFields.push_back(std::make_pair("email", "mknell01@gmail.com"));
-	request.connParams.multipartFields.push_back(std::make_pair("password", "Fpinkytoe31"));
+	request.connParams.multipartFields.push_back(std::make_pair("email", ""));
+	request.connParams.multipartFields.push_back(std::make_pair("password", ""));
 
 	// apply cookies from previous request
 	request.connParams.cookies = result.cookies;
